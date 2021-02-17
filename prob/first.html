@@ -1,0 +1,110 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <title></title>
+  <style type="text/css">code{white-space: pre;}</style>
+  <script src="../katex/katex.min.js"></script><link rel="stylesheet" href="../katex/katex.min.css" /><script type="text/javascript">window.onload = function(){var mathElements = document.getElementsByClassName("math");
+  for (var i=0; i < mathElements.length; i++)
+  {
+   var texText = mathElements[i].firstChild
+   katex.render(texText.data, mathElements[i])
+  }}
+  </script>
+</head>
+<body>
+<p><link rel=stylesheet href=../style.css></p>
+<h1 id="fundamental">fundamental</h1>
+<h2 id="symbols">symbols</h2>
+<table>
+<thead>
+<tr class="header">
+<th align="center">Symbol</th>
+<th align="left">description</th>
+<th align="center">name</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center"><span class="math inline">\Omega</span></td>
+<td align="left">all possible outcomes</td>
+<td align="center">sample space</td>
+</tr>
+<tr class="even">
+<td align="center"><span class="math inline">\omega</span></td>
+<td align="left"><span class="math inline">\omega \in \Omega</span></td>
+<td align="center">a sample point</td>
+</tr>
+<tr class="odd">
+<td align="center"><span class="math inline">A</span></td>
+<td align="left"><span class="math inline">A \subseteq \Omega</span></td>
+<td align="center">an event</td>
+</tr>
+<tr class="even">
+<td align="center"><span class="math inline">P</span></td>
+<td align="left">probability function</td>
+<td align="center">--</td>
+</tr>
+</tbody>
+</table>
+<h2 id="axioms">3 axioms</h2>
+<ol style="list-style-type: decimal">
+<li>probability of an event is between 0 and 1
+<ul>
+<li><span class="math inline">0 \leq P(A) \leq 1</span></li>
+</ul></li>
+<li>probability of everything is 1; of nothing is 0
+<ul>
+<li><span class="math inline">P(\Omega) = 1</span></li>
+<li><span class="math inline">P(\{\}) = 0</span></li>
+</ul></li>
+<li>probability adds up if events dont intersect (are pairwise disjoint)
+<ul>
+<li><span class="math inline">P(A_1 \cup A_2 \cup \dots) = P(A_1) + P(A_2) + \dots</span></li>
+<li>note: only can union countably many events, so cant union stuff like real number range</li>
+</ul></li>
+</ol>
+<h2 id="discussion">discussion</h2>
+<ul>
+<li>remember <span class="math inline">\Omega</span> is specifically <em>experiment outcomes</em>
+<ul>
+<li>even if coin possibilities is <span class="math inline">\{\text{Head}, \text{Tail}\}</span>, flipping two coins experiment is <span class="math inline">\Omega = \{(a, b) \mid a, b \in \{\text{Head}, \text{Tail}\}\}</span></li>
+</ul></li>
+<li><span class="math inline">P</span> called the <em>probability measure</em>, <em>probability distribution</em>, <em>probability</em>
+<ul>
+<li>when homework asks 'describe <span class="math inline">P</span>', probably wants to know, equally distributed?? if not, give function</li>
+</ul></li>
+<li>remember axiom 3 (add probabilities) only works if events DONT INTERSECT.
+<ul>
+<li>one hw problem was 'whats probability of pick 3 things w/ replacement, same <span class="math inline">1 \over 50</span> chance thing picked exactly 2 times?'
+<ul>
+<li>i thought 'ok is <span class="math inline">{1 \over 50} \cdot {1 \over 50} \cdot {50 \over 50} + {1 \over 50} \cdot {50 \over 50} \cdot {1 \over 50} + {50 \over 50} \cdot {1 \over 50} \cdot {1 \over 50}</span>'!!!</li>
+<li>but actually not because the <span class="math inline">{1 \over 50} \cdot {1 \over 50} \cdot {1 \over 50}</span> case overlaps two times i believe. so must manually subtract <span class="math inline">2 \over 50^3</span>.</li>
+</ul></li>
+</ul></li>
+<li>loose? notation: use <span class="math inline">P(\omega)</span> as? <span class="math inline">P(\{\omega\})</span>.</li>
+</ul>
+<h1 id="replacement">replacement</h1>
+<ul>
+<li>replace <span class="math inline">\rightarrow</span> number stay same</li>
+<li>dont replace <span class="math inline">\rightarrow</span> number goes down</li>
+</ul>
+<h1 id="choosepick-binomial-coefficient">choose/pick (binomial coefficient)</h1>
+<p>there are <span class="math inline">n \choose k</span> <span class="math inline">k</span>-sized subsets you can take out of an <span class="math inline">n</span>-sized superset (sets are unordered).</p>
+<p><span class="math display">\displaystyle {n \choose k} = {n! \over {k! (n - k)!}}</span></p>
+<h1 id="infinite-probability">infinite probability</h1>
+<p>experiment: roll 6-side die infinitely. stop when get '4'. outcome is how many times you rolled!!</p>
+<p><span class="math display">\displaystyle \Omega = \{1, 2, 3, 4, ...\} = \mathbb{N}</span></p>
+<p>probability depends on how many times youve rolled so far..</p>
+<p><span class="math display">\displaystyle \begin{aligned}
+P(1) &amp;= {1 \over 6}\\
+P(2) &amp;= ({5 \over 6}) \cdot {1 \over 6}\\
+P(3) &amp;= ({5 \over 6} \cdot {5 \over 6}) \cdot {1 \over 6}\\
+\dots \\
+P(k) &amp;= ({5 \over 6})^{k - 1} \cdot {1 \over 6} = (\text{FailureProb})^{k - 1} \cdot \text{SuccessProb}
+\end{aligned}</span></p>
+<p><span class="math inline">P(\infty) = 0</span> either by taking limit (which always 0 because <span class="math inline">0 \lt \text{FailureProb} \lt 1</span>, so <span class="math inline">\lim\limits_{x \to \infty} \text{FailureProb}^x = 0</span>) or by reasoning with axiom 3</p>
+</body>
+</html>

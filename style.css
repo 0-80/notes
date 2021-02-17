@@ -17,3 +17,10 @@ p
 	{ display: table
 	; margin: auto
 	}
+table
+	{ width: 100%
+	}
+td, th
+	{ border: inset
+	; padding: 0.2em
+	}
