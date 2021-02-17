@@ -1,0 +1,5 @@
+html { display: flex; justify-content: center }
+body { width: 32em }
+p { page-break-inside: avoid }
+
+.math.display { display: table; margin: auto }
