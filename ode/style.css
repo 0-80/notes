@@ -1,5 +1,19 @@
-html { display: flex; justify-content: center }
-body { width: 32em }
-p { page-break-inside: avoid }
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
-.math.display { display: table; margin: auto }
+html
+	{ display: flex
+	; justify-content: center
+	}
+body
+	{ margin: 4em
+	; width: 32em
+	; font-family: 'Open Sans', Arial, sans-serif
+	}
+p
+	{ page-break-inside: avoid
+	}
+
+.math.display
+	{ display: table
+	; margin: auto
+	}

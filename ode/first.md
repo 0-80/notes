@@ -38,19 +38,14 @@ can plug in some known value/point $(x_0, y_0)$, $y_0 = y(x_0)$ and solve for $C
 - **if** standard first-order diffeq
 - **and** $f(x, y)$ and $f_y(x, y)$ are continuous in some area
 - **then** has unique solution that will work in the same area
-- the solution has $(x_0, y_0)$; it must be in the area!!
-
-notes:
-
-- $f_y(x, y)$ is partial derivative of $f$ in terms of y
-- is similar pattern to LEUTFO except interval is 'area' and initial value is 'initial point' because now the functions have 2 variables
+- the solution has $(x_0, y_0)$ which must be in the area!!
 
 ## ETFO: EUTFO without the Unique
 
 - **if** standard first-order diffeq
 - **and** $f(x, y)$ is continuous in some area
 - **then** has a solution that will work on the same interval
-- the solution has $(x_0, y_0)$; it must be in the area!!
+- the solution has $(x_0, y_0)$ which must be in the area!!
 
 ## which can you try to use/apply??
 
