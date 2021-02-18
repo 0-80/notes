@@ -106,5 +106,32 @@ P(3) &amp;= ({5 \over 6} \cdot {5 \over 6}) \cdot {1 \over 6}\\
 P(k) &amp;= ({5 \over 6})^{k - 1} \cdot {1 \over 6} = (\text{FailureProb})^{k - 1} \cdot \text{SuccessProb}
 \end{aligned}</span></p>
 <p><span class="math inline">P(\infty) = 0</span> either by taking limit (which always 0 because <span class="math inline">0 \lt \text{FailureProb} \lt 1</span>, so <span class="math inline">\lim\limits_{x \to \infty} \text{FailureProb}^x = 0</span>) or by reasoning with axiom 3</p>
+<h1 id="sets">sets</h1>
+<h2 id="cartesian-product">cartesian product</h2>
+<p><span class="math display">\displaystyle S_1 \times S_2 = \{(a, b) \mid a \in S_1, b \in S_2\}</span></p>
+<p><span class="math display">\displaystyle \# (S_1 \times S_2) = \# S_2 \cdot \# S_1</span></p>
+<p><span class="math display">\displaystyle S \times S \times S = S^3</span></p>
+<h2 id="complement-ac-of-event-a">complement <span class="math inline">A^c</span> of event <span class="math inline">A</span></h2>
+<p><span class="math display">\displaystyle \begin{aligned}
+A \cup A^c &amp;= \Omega \\
+A \cap A^c &amp;= \{\}
+\end{aligned}</span></p>
+<p><span class="math display">\displaystyle P(\Omega) = 1 = P(A) + P(A^c)</span></p>
+<h1 id="unionintersection-stuff">union/intersection stuff</h1>
+<ul>
+<li><span class="math inline">AB</span> short for <span class="math inline">A \cap B</span></li>
+</ul>
+<h2 id="de-morgan">De Morgan</h2>
+<p><span class="math display">\displaystyle \begin{aligned}
+(A \cup B)^c &amp;= A^c \cap B^c \\
+(A \cap B)^c &amp;= A^c \cup B^c
+\end{aligned}</span></p>
+<h2 id="axiom-3-for-intersecting-sets">axiom 3 for intersecting sets</h2>
+<p><span class="math display">\displaystyle \begin{aligned}
+\\ P(\text{union of sets}) &amp;= P\text{ sum} - \text{all intersections}
+\\ P(A \cup B) &amp;= P(A) + P(B) - P(A \cap B)
+\\ P(A \cup B \cup C) &amp;= P(A) + P(B) + P(C) - P(AB) - P(BC) - P(AC)
+\\ \dots
+\end{aligned}</span></p>
 </body>
 </html>

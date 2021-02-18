@@ -57,3 +57,39 @@ P(k) &= ({5 \over 6})^{k - 1} \cdot {1 \over 6} = (\text{FailureProb})^{k - 1} \
 \end{aligned}$$
 
 $P(\infty) = 0$ either by taking limit (which always 0 because $0 \lt \text{FailureProb} \lt 1$, so $\lim\limits_{x \to \infty} \text{FailureProb}^x = 0$) or by reasoning with axiom 3
+
+# sets
+
+## cartesian product
+$$S_1 \times S_2 = \{(a, b) \mid a \in S_1, b \in S_2\}$$
+
+$$\# (S_1 \times S_2) = \# S_2 \cdot \# S_1$$
+
+$$S \times S \times S = S^3$$
+
+## complement $A^c$ of event $A$
+
+$$\begin{aligned}
+A \cup A^c &= \Omega \\
+A \cap A^c &= \{\}
+\end{aligned}$$
+
+$$P(\Omega) = 1 = P(A) + P(A^c)$$
+
+# union/intersection stuff
+
+- $AB$ short for $A \cap B$
+
+## De Morgan
+$$\begin{aligned}
+(A \cup B)^c &= A^c \cap B^c \\
+(A \cap B)^c &= A^c \cup B^c
+\end{aligned}$$
+
+## axiom 3 for intersecting sets
+$$\begin{aligned}
+\\ P(\text{union of sets}) &= P\text{ sum} - \text{all intersections}
+\\ P(A \cup B) &= P(A) + P(B) - P(A \cap B)
+\\ P(A \cup B \cup C) &= P(A) + P(B) + P(C) - P(AB) - P(BC) - P(AC)
+\\ \dots
+\end{aligned}$$
