@@ -93,3 +93,18 @@ $$\begin{aligned}
 \\ P(A \cup B \cup C) &= P(A) + P(B) + P(C) - P(AB) - P(BC) - P(AC)
 \\ \dots
 \end{aligned}$$
+
+# 'random variables'
+$$X : \omega \to \mathbb{R}$$
+
+represented by capital letter. maps a sample point to a number. weird loose notation. $X$ by itself can mean like 'an output of $X$' or $X$ itself??
+
+$p(k)$ is $P(X = k)$
+
+# ranges/geometry stuff
+geometry
+
+# given (bayes formula)
+prob of A given B: $P(A \mid B)$
+
+$$P(A \mid B) = {P(A \cap B) \over P(B)}$$
