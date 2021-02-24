@@ -52,3 +52,27 @@ can plug in some known value/point $(x_0, y_0)$, $y_0 = y(x_0)$ and solve for $C
 1. **if** linear: LEUTFO
 2. **elif** $f_y$ is continuous: EUTFO
 3. **else** ETFO
+
+# 2.5 Population models
+
+# 2.6 'qualitative solutions of autonomous equations'
+
+# 2.7 change of variables
+you can change a variable to solve it better
+
+## bernoulli
+
+in particuljar if something is in form
+
+$${dy \over dt} + p(t)y = q(t)y^b$$
+
+then substitution $v=y^{1-b}$ will work turn it into linear
+
+# 2.8 exact equation
+if in form
+
+$$M(x, y) + N(x, y){dy \over dx} = 0$$
+
+then is exact if $M_y = N_x$, and all $M$, $N$, $M_y$, and $M_x$ are continuous in open rectangle.
+
+and the (implicit) solution is $f(x, y) = c$ is such that $f_x = M$ and $f_y = N$.
