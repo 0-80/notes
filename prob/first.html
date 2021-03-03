@@ -86,6 +86,8 @@
 </ul></li>
 <li>loose? notation: use <span class="math inline">P(\omega)</span> as? <span class="math inline">P(\{\omega\})</span>.</li>
 </ul>
+<h2 id="geometric-sum">geometric sum</h2>
+<p><span class="math display">\displaystyle \sum_{k=0}^{n-1}ar^k = a \cdot {1-r^n \over 1-r}</span></p>
 <h1 id="replacement">replacement</h1>
 <ul>
 <li>replace <span class="math inline">\rightarrow</span> number stay same</li>
@@ -126,7 +128,7 @@ A \cap A^c &amp;= \{\}
 (A \cup B)^c &amp;= A^c \cap B^c \\
 (A \cap B)^c &amp;= A^c \cup B^c
 \end{aligned}</span></p>
-<h2 id="axiom-3-for-intersecting-sets">axiom 3 for intersecting sets</h2>
+<h2 id="axiom-3-for-sets-that-intersect">axiom 3 for sets that intersect</h2>
 <p><span class="math display">\displaystyle \begin{aligned}
 \\ P(\text{union of sets}) &amp;= P\text{ sum} - \text{all intersections}
 \\ P(A \cup B) &amp;= P(A) + P(B) - P(A \cap B)
@@ -139,8 +141,43 @@ A \cap A^c &amp;= \{\}
 <p><span class="math inline">p(k)</span> is <span class="math inline">P(X = k)</span></p>
 <h1 id="rangesgeometry-stuff">ranges/geometry stuff</h1>
 <p>geometry</p>
-<h1 id="given-bayes-formula">given (bayes formula)</h1>
+<h1 id="given">given</h1>
 <p>prob of A given B: <span class="math inline">P(A \mid B)</span></p>
 <p><span class="math display">\displaystyle P(A \mid B) = {P(A \cap B) \over P(B)}</span></p>
+<h1 id="misc-useful-identities">misc useful identities</h1>
+<p><span class="math display">\displaystyle P(A) = P(A \cap B) + P(A \cap B^c)</span></p>
+<h1 id="partitioned-omega">partitioned <span class="math inline">\Omega</span></h1>
+<p>if <span class="math inline">\Omega</span> can be partitioned into some <span class="math inline">B_1, B_2, B_3, \dots, B_i</span> subsets (<span class="math inline">B_i \cap B_j = \{\}</span>)</p>
+<p>then the probability of some event <span class="math inline">A</span> in <span class="math inline">\Omega</span> will be</p>
+<p><span class="math display">\displaystyle P(A) = P(A \cap B_1) + P(A \cap B_2) + ... + P(A \cap B_i)</span></p>
+<p>which can be rewritten using the 'given' formula as</p>
+<p><span class="math display">\displaystyle \begin{aligned}
+P(A) &amp;= P(A \mid B_1)P(B_1)
+\\ &amp;+ P(A \mid B_2)P(B_2)
+\\ &amp;+ ...
+\\ &amp;+ P(A \mid B_i)P(B_i)
+\end{aligned}</span></p>
+<h1 id="bayes-formula">bayes formula</h1>
+<p>idk wha t its used for??</p>
+<h1 id="independence">independence</h1>
+<p><span class="math inline">A</span> and <span class="math inline">B</span> are independent if</p>
+<p><span class="math display">\displaystyle P(A \cap B) = P(A)P(B)</span></p>
+<p><span class="math inline">A_1</span>, <span class="math inline">A_2</span>, ..., <span class="math inline">A_n</span> are independent (also called <em>mutually independent</em>) if union of each in-order union equals product of probabilities e.g. <span class="math inline">A</span>, <span class="math inline">B</span>, <span class="math inline">C</span> are independent if</p>
+<p><span class="math display">\displaystyle \begin{aligned}
+&amp;P(ABC) = P(A)P(B)P(C)
+\\ \text{and } &amp;P(AB) = P(A)P(B)
+\\ \text{and } &amp;P(AC) = P(A)P(C)
+\\ \text{and } &amp;P(BC) = P(B)P(C)
+\end{aligned}</span></p>
+<h1 id="distributions">distributions</h1>
+<p><span class="math inline">X \sim Y</span>: <span class="math inline">X</span> follows <span class="math inline">Y</span></p>
+<h2 id="binomial-distribution">binomial distribution</h2>
+<p><span class="math inline">X \sim Bin(n, p)</span> if</p>
+<p><span class="math display">\displaystyle P(X = k) = {n \choose k}p^k (1-p)^{n-k}</span></p>
+<p><span class="math inline">n</span> is like success prob, <span class="math inline">p</span> is num of times try. and <span class="math inline">k</span> is like how many times it succeeded (no order). note: <span class="math inline">k</span> only makes sense for values <span class="math inline">0..n</span></p>
+<h2 id="geometric-distribution">geometric distribution</h2>
+<p><span class="math inline">X \sim Geom(p)</span> if</p>
+<p><span class="math display">\displaystyle P(X = k) = (1-p)^{k-1}p</span></p>
+<p><span class="math inline">p</span> is success prob. so <span class="math inline">k</span> is like how many times it took to succeed for first time. note: <span class="math inline">k</span> only makes sense for values <span class="math inline">1..</span></p>
 </body>
 </html>

@@ -28,24 +28,37 @@ can plug in some known value/point $(x_0, y_0)$, $y_0 = y(x_0)$ and solve for $C
 
 ## LEUTFO: *L*inear *E*xistance *U*niqueness *T*heorem *F*irst *O*rder
 
-- **if** standard first-order *linear* diffeq
-- **and** $p(x)$ and $g(x)$ are continuous on some interval
-- **then** has unique solution that will work on the same interval
-- the solution has $(x_0, y_0)$; $x_0$ must be in the interval!!
+given IVP
+
+$${dy \over dx} + p(x)y = g(x), y(x_0) = y_0$$
+
+$p$ and $g$ are continuous on some open interval $(a, b)$ that contains $x_0$
+
+$\rightarrow$ has unique solution defined on same interval
 
 ## EUTFO: LEUTFO without the Linear (more general)
 
-- **if** standard first-order diffeq
-- **and** $f(x, y)$ and $f_y(x, y)$ are continuous in some area
-- **then** has unique solution that will work in the same area
-- the solution has $(x_0, y_0)$ which must be in the area!!
+given IVP
+
+$${dy \over dx} = f(x, y), y(x_0) = y_0$$
+
+both $f$ and $f_y$ are continuous near $(x_0, y_0)$
+
+$\rightarrow$ has a unique solution (defined?) on some open interval $I$ that contains $x_0$
 
 ## ETFO: EUTFO without the Unique
 
-- **if** standard first-order diffeq
-- **and** $f(x, y)$ is continuous in some area
-- **then** has a solution that will work on the same interval
-- the solution has $(x_0, y_0)$ which must be in the area!!
+given IVP
+
+$${dy \over dx} = f(x, y), y(x_0) = y_0$$
+
+$f$ is continuous near $(x_0, y_0)$
+
+$\rightarrow$ has a solution on some open interval $I$ that contains $x_0$
+
+## 'continuous near $(x_0, y_0)$'
+
+means 'continuous on some open rectangle $\alpha < x < \beta$, $\gamma < y < \delta$ that contains the point $(x_0, y_0)$'
 
 ## which can you try to use/apply??
 

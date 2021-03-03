@@ -31,6 +31,10 @@
 		- but actually not because the ${1 \over 50} \cdot {1 \over 50} \cdot {1 \over 50}$ case overlaps two times i believe. so must manually subtract $2 \over 50^3$.
 - loose? notation: use $P(\omega)$ as? $P(\{\omega\})$.
 
+## geometric sum
+
+$$\sum_{k=0}^{n-1}ar^k = a \cdot {1-r^n \over 1-r}$$
+
 # replacement
 - replace $\rightarrow$ number stay same
 - dont replace $\rightarrow$ number goes down
@@ -86,7 +90,7 @@ $$\begin{aligned}
 (A \cap B)^c &= A^c \cup B^c
 \end{aligned}$$
 
-## axiom 3 for intersecting sets
+## axiom 3 for sets that intersect
 $$\begin{aligned}
 \\ P(\text{union of sets}) &= P\text{ sum} - \text{all intersections}
 \\ P(A \cup B) &= P(A) + P(B) - P(A \cap B)
@@ -104,7 +108,61 @@ $p(k)$ is $P(X = k)$
 # ranges/geometry stuff
 geometry
 
-# given (bayes formula)
+# given
 prob of A given B: $P(A \mid B)$
 
 $$P(A \mid B) = {P(A \cap B) \over P(B)}$$
+
+# misc useful identities
+$$P(A) = P(A \cap B) + P(A \cap B^c)$$
+
+# partitioned $\Omega$
+if $\Omega$ can be partitioned into some $B_1, B_2, B_3, \dots, B_i$ subsets ($B_i \cap B_j = \{\}$)
+
+then the probability of some event $A$ in $\Omega$ will be
+
+$$P(A) = P(A \cap B_1) + P(A \cap B_2) + ... + P(A \cap B_i)$$
+
+which can be rewritten using the 'given' formula as
+
+$$\begin{aligned}
+P(A) &= P(A \mid B_1)P(B_1)
+\\ &+ P(A \mid B_2)P(B_2)
+\\ &+ ...
+\\ &+ P(A \mid B_i)P(B_i)
+\end{aligned}$$
+
+# bayes formula
+idk wha t its used for??
+
+# independence
+$A$ and $B$ are independent if
+
+$$P(A \cap B) = P(A)P(B)$$
+
+$A_1$, $A_2$, ..., $A_n$ are independent (also called *mutually independent*) if union of each in-order union equals product of probabilities e.g. $A$, $B$, $C$ are independent if
+
+$$\begin{aligned}
+&P(ABC) = P(A)P(B)P(C)
+\\ \text{and } &P(AB) = P(A)P(B)
+\\ \text{and } &P(AC) = P(A)P(C)
+\\ \text{and } &P(BC) = P(B)P(C)
+\end{aligned}$$
+
+# distributions
+
+$X \sim Y$: $X$ follows $Y$
+
+## binomial distribution
+$X \sim Bin(n, p)$ if
+
+$$P(X = k) = {n \choose k}p^k (1-p)^{n-k}$$
+
+$n$ is like success prob, $p$ is num of times try. and $k$ is like how many times it succeeded (no order). note: $k$ only makes sense for values $0..n$
+
+## geometric distribution
+$X \sim Geom(p)$ if
+
+$$P(X = k) = (1-p)^{k-1}p$$
+
+$p$ is success prob. so $k$ is like how many times it took to succeed for first time. note: $k$ only makes sense for values $1..$

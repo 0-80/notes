@@ -31,26 +31,22 @@
 <p>can plug in some known value/point <span class="math inline">(x_0, y_0)</span>, <span class="math inline">y_0 = y(x_0)</span> and solve for <span class="math inline">C</span>; this situation is called an <strong>I</strong>nitial <strong>V</strong>alue <strong>P</strong>roblem (IVP) bc u have an initial value.</p>
 <h1 id="leutfo-eutfo-etfo">LEUTFO, EUTFO, ETFO</h1>
 <h2 id="leutfo-linear-existance-uniqueness-theorem-first-order">LEUTFO: <em>L</em>inear <em>E</em>xistance <em>U</em>niqueness <em>T</em>heorem <em>F</em>irst <em>O</em>rder</h2>
-<ul>
-<li><strong>if</strong> standard first-order <em>linear</em> diffeq</li>
-<li><strong>and</strong> <span class="math inline">p(x)</span> and <span class="math inline">g(x)</span> are continuous on some interval</li>
-<li><strong>then</strong> has unique solution that will work on the same interval</li>
-<li>the solution has <span class="math inline">(x_0, y_0)</span>; <span class="math inline">x_0</span> must be in the interval!!</li>
-</ul>
+<p>given IVP</p>
+<p><span class="math display">\displaystyle {dy \over dx} + p(x)y = g(x), y(x_0) = y_0</span></p>
+<p><span class="math inline">p</span> and <span class="math inline">g</span> are continuous on some open interval <span class="math inline">(a, b)</span> that contains <span class="math inline">x_0</span></p>
+<p><span class="math inline">\rightarrow</span> has unique solution defined on same interval</p>
 <h2 id="eutfo-leutfo-without-the-linear-more-general">EUTFO: LEUTFO without the Linear (more general)</h2>
-<ul>
-<li><strong>if</strong> standard first-order diffeq</li>
-<li><strong>and</strong> <span class="math inline">f(x, y)</span> and <span class="math inline">f_y(x, y)</span> are continuous in some area</li>
-<li><strong>then</strong> has unique solution that will work in the same area</li>
-<li>the solution has <span class="math inline">(x_0, y_0)</span> which must be in the area!!</li>
-</ul>
+<p>given IVP</p>
+<p><span class="math display">\displaystyle {dy \over dx} = f(x, y), y(x_0) = y_0</span></p>
+<p>both <span class="math inline">f</span> and <span class="math inline">f_y</span> are continuous near <span class="math inline">(x_0, y_0)</span></p>
+<p><span class="math inline">\rightarrow</span> has a unique solution (defined?) on some open interval <span class="math inline">I</span> that contains <span class="math inline">x_0</span></p>
 <h2 id="etfo-eutfo-without-the-unique">ETFO: EUTFO without the Unique</h2>
-<ul>
-<li><strong>if</strong> standard first-order diffeq</li>
-<li><strong>and</strong> <span class="math inline">f(x, y)</span> is continuous in some area</li>
-<li><strong>then</strong> has a solution that will work on the same interval</li>
-<li>the solution has <span class="math inline">(x_0, y_0)</span> which must be in the area!!</li>
-</ul>
+<p>given IVP</p>
+<p><span class="math display">\displaystyle {dy \over dx} = f(x, y), y(x_0) = y_0</span></p>
+<p><span class="math inline">f</span> is continuous near <span class="math inline">(x_0, y_0)</span></p>
+<p><span class="math inline">\rightarrow</span> has a solution on some open interval <span class="math inline">I</span> that contains <span class="math inline">x_0</span></p>
+<h2 id="continuous-near-x_0-y_0">'continuous near <span class="math inline">(x_0, y_0)</span>'</h2>
+<p>means 'continuous on some open rectangle <span class="math inline">\alpha &lt; x &lt; \beta</span>, <span class="math inline">\gamma &lt; y &lt; \delta</span> that contains the point <span class="math inline">(x_0, y_0)</span>'</p>
 <h2 id="which-can-you-try-to-useapply">which can you try to use/apply??</h2>
 <ol style="list-style-type: decimal">
 <li><strong>if</strong> linear: LEUTFO</li>
