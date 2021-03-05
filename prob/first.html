@@ -138,7 +138,7 @@ A \cap A^c &amp;= \{\}
 <h1 id="random-variables">'random variables'</h1>
 <p><span class="math display">\displaystyle X : \omega \to \mathbb{R}</span></p>
 <p>represented by capital letter. maps a sample point to a number. weird loose notation. <span class="math inline">X</span> by itself can mean like 'an output of <span class="math inline">X</span>' or <span class="math inline">X</span> itself??</p>
-<p><span class="math inline">p(k)</span> is <span class="math inline">P(X = k)</span></p>
+<p><span class="math inline">p(k)</span> is <span class="math inline">P(X = k)</span>, called <em>probability mass function</em></p>
 <h1 id="rangesgeometry-stuff">ranges/geometry stuff</h1>
 <p>geometry</p>
 <h1 id="given">given</h1>
@@ -149,7 +149,7 @@ A \cap A^c &amp;= \{\}
 <h1 id="partitioned-omega">partitioned <span class="math inline">\Omega</span></h1>
 <p>if <span class="math inline">\Omega</span> can be partitioned into some <span class="math inline">B_1, B_2, B_3, \dots, B_i</span> subsets (<span class="math inline">B_i \cap B_j = \{\}</span>)</p>
 <p>then the probability of some event <span class="math inline">A</span> in <span class="math inline">\Omega</span> will be</p>
-<p><span class="math display">\displaystyle P(A) = P(A \cap B_1) + P(A \cap B_2) + ... + P(A \cap B_i)</span></p>
+<p><span class="math display">\displaystyle P(A) = P(A \cap B_1) + P(A \cap B_2) + \dots + P(A \cap B_i)</span></p>
 <p>which can be rewritten using the 'given' formula as</p>
 <p><span class="math display">\displaystyle \begin{aligned}
 P(A) &amp;= P(A \mid B_1)P(B_1)
@@ -157,8 +157,15 @@ P(A) &amp;= P(A \mid B_1)P(B_1)
 \\ &amp;+ ...
 \\ &amp;+ P(A \mid B_i)P(B_i)
 \end{aligned}</span></p>
-<h1 id="bayes-formula">bayes formula</h1>
-<p>idk wha t its used for??</p>
+<h2 id="bayes-formula">bayes formula</h2>
+<p>useful when figuring <span class="math inline">P(\text{partition of } \Omega \mid \text{any event } A)</span></p>
+<p><span class="math display">\displaystyle \begin{aligned}
+P(B_k \mid A) &amp;= {P(AB_k) \over P(A)}
+\\ &amp;= {P(AB_k) \over {P(A \cap B_1) + P(A \cap B_2) + \dots}}
+\\ &amp;= {P(A \mid B_k)P(B_k) \over {P(A \mid B_1)P(B_1) + P(A \mid B_2)P(B_2) + \dots}}
+\end{aligned}</span></p>
+<p>e.g. when there are only 2 partitions and <span class="math inline">B</span> is one of them</p>
+<p><span class="math display">\displaystyle P(B \mid A) = {P(A \mid B)P(B) \over P(A \mid B)P(B) + P(A \mid B^c)P(B^c)}</span></p>
 <h1 id="independence">independence</h1>
 <p><span class="math inline">A</span> and <span class="math inline">B</span> are independent if</p>
 <p><span class="math display">\displaystyle P(A \cap B) = P(A)P(B)</span></p>
@@ -171,6 +178,13 @@ P(A) &amp;= P(A \mid B_1)P(B_1)
 \end{aligned}</span></p>
 <h1 id="distributions">distributions</h1>
 <p><span class="math inline">X \sim Y</span>: <span class="math inline">X</span> follows <span class="math inline">Y</span></p>
+<h2 id="bernoulli-distribution">bernoulli distribution</h2>
+<p><span class="math inline">X \sim Ber(p) if</span></p>
+<p><span class="math display">\displaystyle \begin{aligned}
+P(X = 1) &amp;= p
+\\ P(X = 0) &amp;= 1 - p
+\end{aligned}</span></p>
+<p>it is (weighted) coin flip basically</p>
 <h2 id="binomial-distribution">binomial distribution</h2>
 <p><span class="math inline">X \sim Bin(n, p)</span> if</p>
 <p><span class="math display">\displaystyle P(X = k) = {n \choose k}p^k (1-p)^{n-k}</span></p>
@@ -179,5 +193,25 @@ P(A) &amp;= P(A \mid B_1)P(B_1)
 <p><span class="math inline">X \sim Geom(p)</span> if</p>
 <p><span class="math display">\displaystyle P(X = k) = (1-p)^{k-1}p</span></p>
 <p><span class="math inline">p</span> is success prob. so <span class="math inline">k</span> is like how many times it took to succeed for first time. note: <span class="math inline">k</span> only makes sense for values <span class="math inline">1..</span></p>
+<h2 id="hypergeometric-distribution">hypergeometric distribution</h2>
+<p>i dont think we went over this in class but it showed up one hw problem.</p>
+<p>is like specific hw problem picking without replacement, unordered, two possible groups. <span class="math inline">N</span> is num total, <span class="math inline">N_A</span> is num 'success', <span class="math inline">n</span> is how many picking</p>
+<p><span class="math inline">X \sim Hypergeom(N, N_A, n)</span> if</p>
+<p><span class="math display">\displaystyle P(X = k) = {{N_A \choose k}{N-N_A \choose n-k} \over {N \choose n}}</span></p>
+<h1 id="random-variables-1">random variables</h1>
+<h2 id="probability-density-function">probability density function</h2>
+<ul>
+<li><span class="math inline">f(x)</span></li>
+<li>like mass function for intervals; take integral of it</li>
+<li>always <span class="math inline">\geq 0</span></li>
+<li>integral of it everywhere must be <span class="math inline">1</span></li>
+</ul>
+<h2 id="cumulative-distribution-function">cumulative distribution function</h2>
+<p>sum of all probabilities <span class="math inline">\le</span></p>
+<h2 id="expectationmean">expectation/mean</h2>
+<p>for discrete <span class="math inline">X</span></p>
+<p><span class="math display">\displaystyle E[g(X)] = \sum_k g(k)P(X=k)</span></p>
+<p>for continuous <span class="math inline">X</span> with density function <span class="math inline">f(x)</span></p>
+<p><span class="math display">\displaystyle E[g(X)] = \int_{-\infty}^{\infty} g(x)f(x)dx</span></p>
 </body>
 </html>

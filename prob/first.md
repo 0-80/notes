@@ -103,7 +103,7 @@ $$X : \omega \to \mathbb{R}$$
 
 represented by capital letter. maps a sample point to a number. weird loose notation. $X$ by itself can mean like 'an output of $X$' or $X$ itself??
 
-$p(k)$ is $P(X = k)$
+$p(k)$ is $P(X = k)$, called *probability mass function*
 
 # ranges/geometry stuff
 geometry
@@ -121,7 +121,7 @@ if $\Omega$ can be partitioned into some $B_1, B_2, B_3, \dots, B_i$ subsets ($B
 
 then the probability of some event $A$ in $\Omega$ will be
 
-$$P(A) = P(A \cap B_1) + P(A \cap B_2) + ... + P(A \cap B_i)$$
+$$P(A) = P(A \cap B_1) + P(A \cap B_2) + \dots + P(A \cap B_i)$$
 
 which can be rewritten using the 'given' formula as
 
@@ -132,8 +132,18 @@ P(A) &= P(A \mid B_1)P(B_1)
 \\ &+ P(A \mid B_i)P(B_i)
 \end{aligned}$$
 
-# bayes formula
-idk wha t its used for??
+## bayes formula
+useful when figuring $P(\text{partition of } \Omega \mid \text{any event } A)$
+
+$$\begin{aligned}
+P(B_k \mid A) &= {P(AB_k) \over P(A)}
+\\ &= {P(AB_k) \over {P(A \cap B_1) + P(A \cap B_2) + \dots}}
+\\ &= {P(A \mid B_k)P(B_k) \over {P(A \mid B_1)P(B_1) + P(A \mid B_2)P(B_2) + \dots}}
+\end{aligned}$$
+
+e.g. when there are only 2 partitions and $B$ is one of them
+
+$$P(B \mid A) = {P(A \mid B)P(B) \over P(A \mid B)P(B) + P(A \mid B^c)P(B^c)}$$
 
 # independence
 $A$ and $B$ are independent if
@@ -153,6 +163,16 @@ $$\begin{aligned}
 
 $X \sim Y$: $X$ follows $Y$
 
+## bernoulli distribution
+$X \sim Ber(p) if$
+
+$$\begin{aligned}
+P(X = 1) &= p
+\\ P(X = 0) &= 1 - p
+\end{aligned}$$
+
+it is (weighted) coin flip basically
+
 ## binomial distribution
 $X \sim Bin(n, p)$ if
 
@@ -166,3 +186,33 @@ $X \sim Geom(p)$ if
 $$P(X = k) = (1-p)^{k-1}p$$
 
 $p$ is success prob. so $k$ is like how many times it took to succeed for first time. note: $k$ only makes sense for values $1..$
+
+## hypergeometric distribution
+i dont think we went over this in class but it showed up one hw problem.
+
+is like specific hw problem picking without replacement, unordered, two possible groups. $N$ is num total, $N_A$ is num 'success', $n$ is how many picking
+
+$X \sim Hypergeom(N, N_A, n)$ if
+
+$$P(X = k) = {{N_A \choose k}{N-N_A \choose n-k} \over {N \choose n}}$$
+
+# random variables
+## probability density function
+- $f(x)$
+- like mass function for intervals; take integral of it
+- always $\geq 0$
+- integral of it everywhere must be $1$
+
+## cumulative distribution function
+
+sum of all probabilities $\le$
+
+## expectation/mean
+
+for discrete $X$
+
+$$E[g(X)] = \sum_k g(k)P(X=k)$$
+
+for continuous $X$ with density function $f(x)$
+
+$$E[g(X)] = \int_{-\infty}^{\infty} g(x)f(x)dx$$
