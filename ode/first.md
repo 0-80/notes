@@ -14,7 +14,7 @@ standard form is
 
 $${dy \over dx} + p(x)y = g(x)$$
 
-and then if you calculate $\mu(x) = \int e^{p(x)dx}$
+and then if you calculate $\mu(x) = e^{\int p(x)dx}$
 
 the general solution is
 

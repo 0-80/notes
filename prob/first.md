@@ -178,7 +178,7 @@ $X \sim Bin(n, p)$ if
 
 $$P(X = k) = {n \choose k}p^k (1-p)^{n-k}$$
 
-$n$ is like success prob, $p$ is num of times try. and $k$ is like how many times it succeeded (no order). note: $k$ only makes sense for values $0..n$
+$p$ is like success prob, $n$ is num of times try. and $k$ is like how many times it succeeded (no order). note: $k$ only makes sense for values $0..n$
 
 ## geometric distribution
 $X \sim Geom(p)$ if
