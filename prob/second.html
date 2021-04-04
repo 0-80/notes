@@ -1,0 +1,50 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <title></title>
+  <style type="text/css">code{white-space: pre;}</style>
+  <script src="../katex/katex.min.js"></script><link rel="stylesheet" href="../katex/katex.min.css" /><script type="text/javascript">window.onload = function(){var mathElements = document.getElementsByClassName("math");
+  for (var i=0; i < mathElements.length; i++)
+  {
+   var texText = mathElements[i].firstChild
+   katex.render(texText.data, mathElements[i])
+  }}
+  </script>
+</head>
+<body>
+<p><link rel=stylesheet href=../style.css></p>
+<h1 id="section">3</h1>
+<h1 id="random-variables">random variables</h1>
+<h2 id="probability-density-function">probability density function</h2>
+<ul>
+<li><span class="math inline">f(x)</span></li>
+<li>like mass function for intervals; take integral of it</li>
+<li>always <span class="math inline">\geq 0</span></li>
+<li>integral of it everywhere must be <span class="math inline">1</span></li>
+</ul>
+<h2 id="cumulative-distribution-function">cumulative distribution function</h2>
+<p>sum of all probabilities <span class="math inline">\le</span></p>
+<p>usually <span class="math inline">F</span>, and it is</p>
+<p><span class="math display">\displaystyle F(s) = P(X \le s) = \int^s_{-\infty}f(x)dx</span></p>
+<p>(<span class="math inline">f</span> is density function)</p>
+<h2 id="expectationmean">expectation/mean</h2>
+<p>for discrete <span class="math inline">X</span></p>
+<p><span class="math display">\displaystyle E[g(X)] = \sum_k g(k)P(X=k)</span></p>
+<p>for continuous <span class="math inline">X</span> with density function <span class="math inline">f(x)</span></p>
+<p><span class="math display">\displaystyle E[g(X)] = \int_{-\infty}^{\infty} g(x)f(x)dx</span></p>
+<p>'<span class="math inline">n</span>th moment' is <span class="math inline">E[X^n]</span></p>
+<h2 id="variance">variance</h2>
+<p>variance formula in terms of expectation</p>
+<p><span class="math display">\displaystyle \text{Var}(X) = E[X^2] - E[X]^2</span></p>
+<p>expectation is like linear ofzo</p>
+<p><span class="math display">\displaystyle E[aX + b] = aE[X] + b</span></p>
+<p>variance some identity</p>
+<p><span class="math display">\displaystyle \text{Var}(aX + b) = a^2\text{Var}(X)</span></p>
+<h1 id="normal">normal</h1>
+<p><span class="math display">\displaystyle X \sim N(\mu, \sigma^2)</span></p>
+<p><span class="math display">\displaystyle Z = {X - \mu \over \sigma}</span></p>
+</body>
+</html>

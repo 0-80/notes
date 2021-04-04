@@ -195,24 +195,3 @@ is like specific hw problem picking without replacement, unordered, two possible
 $X \sim Hypergeom(N, N_A, n)$ if
 
 $$P(X = k) = { {N_A \choose k}{N-N_A \choose n-k} \over {N \choose n}}$$
-
-# random variables
-## probability density function
-- $f(x)$
-- like mass function for intervals; take integral of it
-- always $\geq 0$
-- integral of it everywhere must be $1$
-
-## cumulative distribution function
-
-sum of all probabilities $\le$
-
-## expectation/mean
-
-for discrete $X$
-
-$$E[g(X)] = \sum_k g(k)P(X=k)$$
-
-for continuous $X$ with density function $f(x)$
-
-$$E[g(X)] = \int_{-\infty}^{\infty} g(x)f(x)dx$$
