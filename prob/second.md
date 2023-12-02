@@ -49,4 +49,62 @@ $$\text{Var}(aX + b) = a^2\text{Var}(X)$$
 
 $$X \sim N(\mu, \sigma^2)$$
 
+$\mu$ called _mean_, $\sigma^2$ called _variance_
+
 $$Z = {X - \mu \over \sigma}$$
+
+# 4
+
+## normal approximation
+$\text{Bin}(n, p)$ is approx $N(np, np(1-p))$ when $n$ is large
+
+## continuity correction
+when normal approximating (above), $P(\text{int1} \le X \le \text{int2})$ better as $P(\text{int1} - 0.5 \le X \le \text{int2} + 0.5)$
+
+## poisson
+
+$X \sim \text{Poisson}(\lambda)$ if
+
+$$P(X=k)=e^{-\lambda}\cdot {\lambda^{k} \over {k!}}$$
+
+for $k \in \{0, 1, 2, \dots\}$
+
+## exponential distribution
+
+$X \sim \text{Exp}(\lambda)$ if it has density function
+
+$$\begin{aligned}
+f(x) &= \lambda e^{-\lambda x} &\text{ when } x \ge 0
+\\ f(x) &= 0 &\text{ when } x \lt 0
+\end{aligned}$$
+
+$\lambda$ called the _rate_
+
+# 5
+
+## moment generating function
+for random var $X$ is
+
+$$M(t) = E[e^{tX}]$$
+
+$t$ is real number
+
+it generates moments by differentating
+
+$$E[X^n] = M^{(n)}(0)$$
+
+## distribution of a function of random variable?
+
+### continuous
+
+$Y = g(X)$ where $g$ is
+
+- differentiable
+- one-to-one
+- derivative is zero at finitely many points
+
+then density function $f_Y$ is
+
+$$f_Y(y) = f_X(g^{-1}(y)){1 \over |g'(g^{-1}(y))|}$$
+
+note: $g^{-1}$ is inverse function, not $1 \over g$

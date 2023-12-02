@@ -51,6 +51,41 @@
 <p><span class="math display">\text{Var}(aX + b) = a^2\text{Var}(X)</span></p>
 <h1 id="normal">normal</h1>
 <p><span class="math display">X \sim N(\mu, \sigma^2)</span></p>
+<p><span class="math inline">\mu</span> called <em>mean</em>, <span class="math inline">\sigma^2</span> called <em>variance</em></p>
 <p><span class="math display">Z = {X - \mu \over \sigma}</span></p>
+<h1 id="section-1">4</h1>
+<h2 id="normal-approximation">normal approximation</h2>
+<p><span class="math inline">\text{Bin}(n, p)</span> is approx <span class="math inline">N(np, np(1-p))</span> when <span class="math inline">n</span> is large</p>
+<h2 id="continuity-correction">continuity correction</h2>
+<p>when normal approximating (above), <span class="math inline">P(\text{int1} \le X \le \text{int2})</span> better as <span class="math inline">P(\text{int1} - 0.5 \le X \le \text{int2} + 0.5)</span></p>
+<h2 id="poisson">poisson</h2>
+<p><span class="math inline">X \sim \text{Poisson}(\lambda)</span> if</p>
+<p><span class="math display">P(X=k)=e^{-\lambda}\cdot {\lambda^{k} \over {k!}}</span></p>
+<p>for <span class="math inline">k \in \{0, 1, 2, \dots\}</span></p>
+<h2 id="exponential-distribution">exponential distribution</h2>
+<p><span class="math inline">X \sim \text{Exp}(\lambda)</span> if it has density function</p>
+<p><span class="math display">\begin{aligned}
+f(x) &amp;= \lambda e^{-\lambda x} &amp;\text{ when } x \ge 0
+\\ f(x) &amp;= 0 &amp;\text{ when } x \lt 0
+\end{aligned}</span></p>
+<p><span class="math inline">\lambda</span> called the <em>rate</em></p>
+<h1 id="section-2">5</h1>
+<h2 id="moment-generating-function">moment generating function</h2>
+<p>for random var <span class="math inline">X</span> is</p>
+<p><span class="math display">M(t) = E[e^{tX}]</span></p>
+<p><span class="math inline">t</span> is real number</p>
+<p>it generates moments by differentating</p>
+<p><span class="math display">E[X^n] = M^{(n)}(0)</span></p>
+<h2 id="distribution-of-a-function-of-random-variable">distribution of a function of random variable?</h2>
+<h3 id="continuous">continuous</h3>
+<p><span class="math inline">Y = g(X)</span> where <span class="math inline">g</span> is</p>
+<ul>
+<li>differentiable</li>
+<li>one-to-one</li>
+<li>derivative is zero at finitely many points</li>
+</ul>
+<p>then density function <span class="math inline">f_Y</span> is</p>
+<p><span class="math display">f_Y(y) = f_X(g^{-1}(y)){1 \over |g&#39;(g^{-1}(y))|}</span></p>
+<p>note: <span class="math inline">g^{-1}</span> is inverse function, not <span class="math inline">1 \over g</span></p>
 </body>
 </html>
